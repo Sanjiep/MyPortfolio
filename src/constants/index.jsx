@@ -100,7 +100,7 @@ import {
   ];
   
   export const ABOUT =
-    "As a dedicated Full Stack Developer, I specialize in creating dynamic and responsive web applications that provide seamless user experiences. With a strong foundation in both front-end and back-end technologies, I excel in building robust and scalable solutions. My expertise includes working with JavaScript frameworks such as React and Node.js, as well as proficiency in databases like MongoDB and SQL. I am passionate about continuous learning and keeping up-to-date with the latest industry trends, which allows me to implement modern practices and tools in my projects.";
+    "I am a full stack developer that specializes in JavaScript and associated frameworks, such as ReactJS, NextJS, and Node. I specialize in developing dynamic, responsive web apps using Express for backend development and MongoDB with Mongoose for effective data management. I have a keen eye for design and use Tailwind CSS to develop clean, visually attractive interfaces.";
   
   export const EXPERIENCES = [
     {
@@ -148,7 +148,7 @@ import {
   
   export const CONTACT = {
     text: "I am always excited to collaborate on new and challenging projects. Whether you have a specific project in mind or just want to explore potential opportunities, Id love to hear from you. Lets combine our skills and expertise to create something amazing. Feel free to reach out to discuss how we can work together to achieve your goals.",
-    email: "hi@benson.langford.me",
-    phone: "+(221 - 7654567892)",
+    email: "whoissanjiep@gmail.com",
+    phone: "+358-415776010",
   };
   
