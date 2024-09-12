@@ -126,11 +126,11 @@ import {
       icon: <FaGithub fontSize={26} className="hover:opacity-80" />,
     },
     {
-      href: "https://x.com/",
+      href: "https://dribbble.com/sanjeev_magar",
       icon: <FaDribbble fontSize={26} className="hover:opacity-80" />,
     },
     {
-      href: "https://x.com/",
+      href: "https://instagram.com/uisanjiep",
       icon: <FaInstagram fontSize={26} className="hover:opacity-80" />,
     },
     {
@@ -138,7 +138,7 @@ import {
       icon: <FaLinkedin fontSize={26} className="hover:opacity-80" />,
     },
     {
-      href: "https://x.com/",
+      href: "https://x.com/sanjiepM",
       icon: <FaXTwitter fontSize={26} className="hover:opacity-80" />,
     },
   ];
