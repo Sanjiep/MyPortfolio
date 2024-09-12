@@ -5,6 +5,7 @@ import {
     FaFacebook,
     FaDiscord,
     FaInstagram,
+    FaDribbble,
   } from "react-icons/fa6";
   
   import project1 from "../assets/project1.webp";
@@ -121,28 +122,24 @@ import {
   
   export const SOCIAL_MEDIA_LINKS = [
     {
-      href: "https://x.com/",
-      icon: <FaFacebook fontSize={26} className="hover:opacity-80" />,
+      href: "https://github.com/sanjiep/",
+      icon: <FaGithub fontSize={26} className="hover:opacity-80" />,
     },
     {
       href: "https://x.com/",
-      icon: <FaDiscord fontSize={26} className="hover:opacity-80" />,
+      icon: <FaDribbble fontSize={26} className="hover:opacity-80" />,
     },
     {
       href: "https://x.com/",
       icon: <FaInstagram fontSize={26} className="hover:opacity-80" />,
     },
     {
+      href: "https://www.linkedin.com/in/magarsanjeev",
+      icon: <FaLinkedin fontSize={26} className="hover:opacity-80" />,
+    },
+    {
       href: "https://x.com/",
       icon: <FaXTwitter fontSize={26} className="hover:opacity-80" />,
-    },
-    {
-      href: "https://github.com/",
-      icon: <FaGithub fontSize={26} className="hover:opacity-80" />,
-    },
-    {
-      href: "https://www.linkedin.com/",
-      icon: <FaLinkedin fontSize={26} className="hover:opacity-80" />,
     },
   ];
   
