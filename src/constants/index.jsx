@@ -25,7 +25,7 @@ import {
   ];
   
   export const MARQUEE_TEXT =
-    "React, Next.js, Node, MongoDb, Tailwind, MySql, Javascript, Redis,";
+    "React, Next.js, Node, Express, MongoDb, Tailwind, Mongoose, Javascript, PostMan, Redux,";
   
   export const PROJECTS = [
     {
