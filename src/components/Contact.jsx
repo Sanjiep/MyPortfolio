@@ -1,6 +1,17 @@
 import { CONTACT, SOCIAL_MEDIA_LINKS } from "../constants"
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 const Contact = () => {
+    const handleButtonClick = async () => {
+        const cal = await getCalApi({ "namespace": "letstalk" });
+        cal("ui", { "styles": { "branding": { "brandColor": "#bef264" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    };
+
+    useEffect(() => {
+        handleButtonClick();
+    }, [])
+
   return (
     <section id="contact">
         <div className="mx-auto max-w-6xl">
@@ -20,7 +31,11 @@ const Contact = () => {
             </div>
         </div>
         <div className="flex justify-center">
-            <button className="border-2 border-lime-300 p-5 text-xl lg:text-2xl rounded-full font-semibold text-lime-300 transition ease-in duration-200 hover:text-black hover:bg-lime-300">
+            <button onClick={handleButtonClick} 
+                className="border-2 border-lime-300 p-5 text-xl lg:text-2xl rounded-full font-semibold text-lime-300 transition ease-in duration-200 hover:text-black hover:bg-lime-300"
+                data-cal-namespace="letstalk"
+                data-cal-link="sanjeevmagar/letstalk"
+                data-cal-config='{"layout":"month_view"}'>
                 Book an Appointment
             </button>
         </div>
@@ -34,6 +49,7 @@ const Contact = () => {
         <p className="my-8 text-center text-gray-400">
             &copy; Sanjeev. All rights reserved.
         </p>
+  
     </section>
   )
 }
