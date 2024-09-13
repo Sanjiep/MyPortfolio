@@ -6,10 +6,12 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import { SparklesCore } from './components/ui/sparkles'
 
 const App = () => {
   return (
-      <main className='font-light text-white antialiased selection:bg-lime-300 selection:text-black'>
+    
+    <main className="font-light text-white antialiased selection:bg-lime-300 selection:text-black relative">
         <Navbar />
         <Hero />
         <Marquee />
@@ -17,7 +19,7 @@ const App = () => {
         <About />
         <Experience />
         <Contact />
-      </main>
+    </main>
   )
 }
 

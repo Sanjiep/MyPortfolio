@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { LINKS } from "../constants";
 import { AnimatePresence, motion } from "framer-motion";
+import { SparklesCore } from "./ui/sparkles";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -62,6 +63,17 @@ const Navbar = () => {
         exit="hidden"
         variants={containerVariants}
         className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-20">
+        <div className="w-full absolute h-screen pointer-events-none">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={0.8}
+            particleDensity={60}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </div>
             <ul className="space-y-6 text-3xl">
                 {LINKS.map((link) => (
                     <motion.li 
