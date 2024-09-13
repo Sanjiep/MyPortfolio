@@ -1,11 +1,12 @@
-import { SparklesCore } from './ui/sparkles';
 import { LuImport } from 'react-icons/lu'
 import sanjeev from '../assets/sanjeev.webp'
+import { AuroraBackground } from './ui/aurora-background'
 
 const Hero = () => {
   return (
     <section>
-        <div className="flex  flex-col items-center justify-center">
+      <AuroraBackground/>
+        <div className="relative flex  flex-col items-center justify-center">
           <h1 className="mt-16 overflow-hidden text-[12vw] font-semibold uppercase leading-none text-center">
             SANJEEV <br /> MAGAR
           </h1>

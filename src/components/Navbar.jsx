@@ -28,7 +28,23 @@ const Navbar = () => {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.1
+                staggerChildren: 0.2
+            }
+        },
+        exit: {
+            opacity: 0,
+            y: "-100%",
+            transition: {
+                y: {
+                    type: 'spring',
+                    stiffness: 150,
+                    damping: 20,
+                    duration: 0.5
+                },
+                opacity: {
+                    duration: 0.5,
+                    ease: 'easeInOut'
+                }
             }
         }
     } 
@@ -55,12 +71,12 @@ const Navbar = () => {
             )}
         </button>
     </nav>
-    <AnimatePresence/>
+    <AnimatePresence>
     {isOpen && (
         <motion.div 
         initial="hidden"
         animate="visible"
-        exit="hidden"
+        exit="exit"
         variants={containerVariants}
         className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center z-20">
         <div className="w-full absolute h-screen pointer-events-none">
@@ -87,6 +103,7 @@ const Navbar = () => {
             </ul>
         </motion.div>
         )}
+        </AnimatePresence>
     </>
   )
 }
