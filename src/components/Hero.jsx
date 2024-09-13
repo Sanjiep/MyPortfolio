@@ -1,5 +1,5 @@
 import { LuImport } from 'react-icons/lu'
-import benson from '../assets/benson.webp'
+import sanjeev from '../assets/sanjeev.webp'
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
                 </a>
             </div>
             <div className='w-full '>
-                <img src={benson} alt='Sanjeev Magar' className='mt-8 h-96 w-full object-cover'/>
+                <img src={sanjeev} alt='Sanjeev Magar' className='mt-8 h-96 w-full object-cover'/>
             </div>
         </div>
     </section>
