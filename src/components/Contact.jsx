@@ -3,9 +3,9 @@ import { CONTACT, SOCIAL_MEDIA_LINKS } from "../constants"
 const Contact = () => {
 
   return (
-    <section data-scroll data-scroll-speed='.3' id="contact" className="bg-black rounded-t-3xl">
+    <section data-scroll data-scroll-speed='.3' id="contact" className="bg-black rounded-t-3xl py-2">
         <div className="mx-auto max-w-6xl">
-            <p className="py-14 text-center text-3xl lg:text-8xl">
+            <p className="py-5 text-center text-3xl lg:text-8xl">
             Lets Connect.
             </p>
             <p className="p-4 text-xl">

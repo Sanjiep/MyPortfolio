@@ -14,8 +14,8 @@ const Appoinment = () => {
 
   return (
     <section data-scroll-section data-scroll data-scroll-speed='0.1' data-scroll-sticky data-scroll-target="#letsTalk-target"
-    id='letsTalk' className='h-[100vh] bg-lime-300 rounded-t-3xl'>
-        <div id='letsTalk-target' className='flex pt-10 lg:pt-30 pb-5 justify-center'>
+    id='letsTalk' className='lg:h-[100vh] bg-lime-300 rounded-t-3xl py-20'>
+        <div id='letsTalk-target' className='flex lg:pt-30 pb-5 justify-center'>
             <h1 className='text-black text-center uppercase font-bold text-5xl lg:text-[10rem]'>Ready <br /> to start <br /> the Project?</h1>
         </div>
         <div className="flex justify-center">
