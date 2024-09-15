@@ -2,8 +2,8 @@ import { PROJECTS } from "../constants"
 
 const Projects = () => {
   return (
-    <section className="p-8" id="projects">
-        <h2 className="my-10 text-center text-3xl lg:text-8xl">My Work</h2>
+    <section data-scroll data-scroll-section data-scroll-speed='-.2' className="p-8 py-10 bg-[#fffcf2] rounded-t-3xl" id="projects">
+        <h2 className="my-10 text-[#212121] text-center text-3xl lg:text-8xl">My Work</h2>
         <div className="colums-1 gap-4 md:columns-2 lg:columns-3">
         {PROJECTS.map((project) => (
             <a href={project.link} key={project.id} target="_blank" rel="noopener noreffer" className="block">

@@ -12,16 +12,11 @@ import {
   import project2 from "../assets/project2.webp";
   import project3 from "../assets/project3.webp";
   import project4 from "../assets/project4.webp";
-  import project5 from "../assets/project5.webp";
-  import project6 from "../assets/project6.webp";
-  import project7 from "../assets/project7.webp";
-  import project8 from "../assets/project8.webp";
-  import project9 from "../assets/project9.webp";
   
   export const LINKS = [
     { id: "projects", name: "projects" },
     { id: "about", name: "about" },
-    { id: "experience", name: "experience" },
+    { id: "letsTalk", name: "let's talk" },
     { id: "contact", name: "Contact" },
   ];
   
@@ -61,47 +56,10 @@ import {
       imgSrc: project4,
       link: "https://example.com/blog-platform",
     },
-    {
-      id: 5,
-      title: "Task Management Tool",
-      description: "A task management tool to organize and prioritize work.",
-      imgSrc: project5,
-      link: "https://example.com/task-management-tool",
-    },
-    {
-      id: 6,
-      title: "Online Learning Platform",
-      description:
-        "An online learning platform offering various courses and resources.",
-      imgSrc: project6,
-      link: "https://example.com/online-learning-platform",
-    },
-    {
-      id: 7,
-      title: "Fitness Tracker",
-      description: "A mobile application to track fitness activities and goals.",
-      imgSrc: project7,
-      link: "https://example.com/fitness-tracker",
-    },
-    {
-      id: 8,
-      title: "Recipe App",
-      description: "An app for browsing and saving various cooking recipes.",
-      imgSrc: project8,
-      link: "https://example.com/recipe-app",
-    },
-    {
-      id: 9,
-      title: "Weather Dashboard",
-      description:
-        "A weather dashboard providing current weather data and forecasts.",
-      imgSrc: project9,
-      link: "https://example.com/weather-dashboard",
-    },
   ];
   
   export const ABOUT =
-    "I am a full stack developer that specializes in JavaScript and associated frameworks, such as ReactJS, NextJS, and Node. I specialize in developing dynamic, responsive web apps using Express for backend development and MongoDB with Mongoose for effective data management. I have a keen eye for design and use Tailwind CSS to develop clean, visually attractive interfaces.";
+    "I am a full stack developer that specializes in JavaScript and associated frameworks, such as ReactJS, NextJS, and Node. I specialize in developing dynamic, responsive web apps using Express for backend development and MongoDB with Mongoose for effective data management.";
   
   export const EXPERIENCES = [
     {
