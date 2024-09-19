@@ -6,12 +6,12 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   const words = ['A Web Developer', 'A FullStack Developer', 'A UI/UX Designer', 'A Creative Designer']
   return (
-    <section data-scroll-section data-scroll data-scroll-speed='-1'>
+    <section>
       <div className="relative flex  flex-col items-center justify-center">
         <motion.h1 
-        initial={{x: -100, opacity:0}} 
-        animate={{x:0, opacity:1}} 
-        transition={{ease:[0.5, 1, 0.89, 1], duration:1}} 
+        initial={{opacity:0}} 
+        animate={{opacity:1}} 
+        transition={{ease:[0.5, 1, 0.89, 1], duration:2}} 
         className="mt-16 overflow-hidden text-[12vw] font-semibold uppercase leading-none text-center">
           SANJEEV <br /> MAGAR
         </motion.h1>
@@ -27,9 +27,11 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div data-scroll-section data-scroll data-scroll-speed='.2' className='w-full'>
+      <motion.div initial={{opacity:0}} 
+        animate={{opacity:1}} 
+        transition={{ease:[0.5, 1, 0.89, 1], duration:2}}  className='w-full'>
         <img src={sanjeev} alt='Sanjeev Magar' className='h-96 w-full object-cover' />
-      </div>
+      </motion.div>
     </section>
   )
 }

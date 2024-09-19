@@ -2,7 +2,7 @@ import { PROJECTS } from "../constants"
 
 const Projects = () => {
   return (
-    <section data-scroll data-scroll-section data-scroll-speed='-0.2' className="p-8 lg:py-10 bg-[#fffcf2] rounded-t-3xl" id="projects">
+    <section className="p-8 h-full lg:py-10 bg-[#fffcf2] rounded-t-3xl sticky" id="projects">
         <h2 className="my-6 text-[#212121] text-center text-3xl lg:text-8xl">My Work</h2>
         <div className="colums-1 gap-4 md:columns-2 lg:columns-3">
         {PROJECTS.map((project) => (

@@ -1,6 +1,7 @@
-import React from 'react'
 import { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Appoinment = () => {
     const handleButtonClick = async () => {
@@ -8,15 +9,26 @@ const Appoinment = () => {
         cal("ui", { "styles": { "branding": { "brandColor": "#bef264" } }, "hideEventTypeDetails": false, "layout": "month_view" });
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         handleButtonClick();
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("#head h1", {
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: "#letsTalk",
+            start: "top 80%",
+            end: "bottom 80%",
+            markers: true,
+        },
+    })
     }, []);
 
   return (
-    <section data-scroll-section data-scroll data-scroll-speed='0.1' data-scroll-sticky data-scroll-target="#letsTalk-target"
-    id='letsTalk' className='lg:h-[100vh] bg-lime-300 rounded-t-3xl py-20'>
-        <div id='letsTalk-target' className='flex lg:pt-30 pb-5 justify-center'>
-            <h1 className='text-black text-center uppercase font-bold text-5xl lg:text-[10rem]'>Ready <br /> to start <br /> the Project?</h1>
+    <section id="letsTalk" className='bg-lime-300 rounded-t-3xl py-20'>
+        <div id="head" className='flex lg:pt-30 pb-5 justify-center'>
+            <h1 className='text-black text-center uppercase font-bold text-5xl lg:text-[10rem]'>
+                <span>Ready</span> <br /> <span>to start </span><br /> <span> the Project?</span></h1>
         </div>
         <div className="flex justify-center">
             <button onClick={handleButtonClick} 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Marquee = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed='-.2' className='my-4 lg:rounded-t-3xl w-full bg-lime-300 text-black lg:py-6 lg:h-[25vh]'>
+    <div className='my-4 w-full bg-lime-300 text-black lg:py-6'>
         <div className='flex overflow-hidden whitespace-nowrap'>
             {[...Array(2)].map((_, index) => (
                 <motion.h1
