@@ -2,16 +2,13 @@ import {
     FaXTwitter,
     FaGithub,
     FaLinkedin,
-    FaFacebook,
-    FaDiscord,
     FaInstagram,
     FaDribbble,
   } from "react-icons/fa6";
   
-  import project1 from "../assets/project1.webp";
-  import project2 from "../assets/project2.webp";
+  import project1 from "../assets/Project1.webp";
+  import project2 from "../assets/Project2.webp";
   import project3 from "../assets/project3.webp";
-  import project4 from "../assets/project4.webp";
   
   export const LINKS = [
     { id: "projects", name: "projects" },
@@ -26,36 +23,37 @@ import {
   export const PROJECTS = [
     {
       id: 1,
-      title: "E-commerce Website",
+      title: "Hanover",
       description:
-        "A full-featured e-commerce website built with React and Node.js.",
+        "A full-featured order tracking website built with Next.js and Node.js.",
       imgSrc: project1,
-      link: "https://example.com/ecommerce-website",
+      link: "https://hanover-lilac.vercel.app/",
     },
     {
       id: 2,
-      title: "Social Media App",
+      title: "A Chat App",
       description:
-        "A social media application with real-time chat and notifications.",
+        "A chat application with real-time chat and notifications.",
       imgSrc: project2,
-      link: "https://example.com/social-media-app",
+      link: "https://github.com/Sanjiep/KuraKani",
     },
     {
       id: 3,
-      title: "Portfolio Website",
+      title: "Job Portal",
       description:
-        "A personal portfolio website to showcase projects and skills.",
+        "A job portal with user authentication and job posting features.",
       imgSrc: project3,
-      link: "https://example.com/portfolio-website",
+      link: "#",
     },
     {
       id: 4,
-      title: "Blog Platform",
+      title: "Something",
       description:
-        "A blogging platform with user authentication and content management.",
-      imgSrc: project4,
-      link: "https://example.com/blog-platform",
+        "Something Coming Soon!",
+      videoSrc: "https://cdn.dribbble.com/userupload/14523432/file/original-d3ccbc9d10c716bebf705aa441d13204.mp4",
+      link: "#",
     },
+
   ];
   
   export const ABOUT =

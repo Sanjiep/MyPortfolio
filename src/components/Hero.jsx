@@ -8,13 +8,10 @@ const Hero = () => {
   return (
     <section>
       <div className="relative flex  flex-col items-center justify-center">
-        <motion.h1 
-        initial={{opacity:0}} 
-        animate={{opacity:1}} 
-        transition={{ease:[0.5, 1, 0.89, 1], duration:2}} 
+        <h1 
         className="mt-16 overflow-hidden text-[12vw] font-semibold uppercase leading-none text-center">
           SANJEEV <br /> MAGAR
-        </motion.h1>
+        </h1>
 
           <h2 className="pt-4 lg:text-4xl text-2xl text-left font-medium">
             <FlipWords words={words} />

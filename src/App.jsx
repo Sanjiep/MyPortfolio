@@ -1,42 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
-import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Appoinment from './components/Appoinment';
+import { motion } from 'framer-motion';
 
 const App = () => {
-  const containerRef = useRef(null);
-  const scrollRef = useRef(null); // Keep track of the scroll instance
-
-  useEffect(() => {
-    const screenWidth = window.innerWidth;
-
-    // Initialize LocomotiveScroll if screen width >= 768px
-    if (screenWidth >= 768) {
-      scrollRef.current = new LocomotiveScroll({
-        el: containerRef.current,
-        smooth: true,
-        getDirection: true,
-      });
-    }
-
-    // Clean up LocomotiveScroll instance when the component unmounts
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.destroy();
-      }
-    };
-  }, []);
 
   return (
-    <main
-      ref={containerRef}
-      data-scroll-container
+    <motion.main initial={{opacity:0}} 
+    animate={{opacity:1}} 
+    transition={{ease:[0.5, 1, 0.89, 1], duration:2}}
       className="font-light text-white antialiased selection:bg-lime-300 selection:text-black relative">
       <Navbar />
       <Hero />
@@ -45,7 +22,7 @@ const App = () => {
       <About />
       <Appoinment />
       <Contact />
-    </main>
+    </motion.main>
   );
 };
 

@@ -3,7 +3,7 @@ import { CONTACT, SOCIAL_MEDIA_LINKS } from "../constants"
 const Contact = () => {
 
   return (
-    <section id="contact" className="rounded-t-3xl py-2">
+    <section id="contact">
         <div className="mx-auto max-w-6xl">
             <p className="py-5 text-center text-3xl lg:text-8xl">
             Lets Connect.
@@ -20,14 +20,14 @@ const Contact = () => {
             </a>
             </div>
         </div>
-        <div className="mt-14 flex item-center justify-center gap-8">
+        <div className="mt-20 flex item-center justify-center gap-8">
             {SOCIAL_MEDIA_LINKS.map((link, index) => (
                 <a key={index} target="_blank" href={link.href} rel="noopener noreferrer" className="transition delay-100 ease-in-out hover:text-lime-300">
                     {link.icon}
                 </a>
             ))}
         </div>
-        <p className="py-8 text-center text-gray-400">
+        <p className="my-8 text-center text-gray-400">
             &copy; Sanjeev. All rights reserved.
         </p>
     </section>
