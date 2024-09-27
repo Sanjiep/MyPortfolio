@@ -6,9 +6,9 @@ import {
     FaDribbble,
   } from "react-icons/fa6";
   
-  import project1 from "../assets/Project1.webp";
-  import project2 from "../assets/Project2.webp";
-  import project3 from "../assets/Project3.webp";
+  import project1 from "../assets/Project1.png";
+  import project2 from "../assets/Project2.png";
+  import project3 from "../assets/Project3.png";
   
   export const LINKS = [
     { id: "projects", name: "projects" },
