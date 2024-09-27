@@ -8,7 +8,7 @@ import {
   
   import project1 from "../assets/Project1.webp";
   import project2 from "../assets/Project2.webp";
-  import project3 from "../assets/project3.webp";
+  import project3 from "../assets/Project3.webp";
   
   export const LINKS = [
     { id: "projects", name: "projects" },
