@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
+import PropTypes from "prop-types";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -13,7 +13,7 @@ export const HoverEffect = ({
     (<div
       className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10", className)}>
       {items.map((item, idx) => (
-        <Link
+        <a
           href={item?.link}
           key={item?.link}
           className="relative group  block p-2 h-full w-full"
@@ -39,7 +39,7 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </Link>
+        </a>
       ))}
     </div>)
   );
@@ -82,3 +82,9 @@ export const CardDescription = ({
     </p>)
   );
 };
+
+HoverEffect.propTypes = { items: PropTypes.arrayOf(PropTypes.shape({ link: PropTypes.string.isRequired, title: PropTypes.string.isRequired, description: PropTypes.string })).isRequired, className: PropTypes.string };
+const contentProps = { className: PropTypes.string, children: PropTypes.node };
+Card.propTypes = contentProps;
+CardTitle.propTypes = contentProps;
+CardDescription.propTypes = contentProps;

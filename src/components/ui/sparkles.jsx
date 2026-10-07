@@ -1,8 +1,9 @@
-"use client";;
-import React, { useId } from "react";
+"use client";
+import { useId } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import PropTypes from "prop-types";
 import { cn } from "../../lib/utils";
 import { motion, useAnimation } from "framer-motion";
 
@@ -419,3 +420,5 @@ export const SparklesCore = (props) => {
     </motion.div>)
   );
 };
+
+SparklesCore.propTypes = { id: PropTypes.string, className: PropTypes.string, background: PropTypes.string, minSize: PropTypes.number, maxSize: PropTypes.number, speed: PropTypes.number, particleColor: PropTypes.string, particleDensity: PropTypes.number };

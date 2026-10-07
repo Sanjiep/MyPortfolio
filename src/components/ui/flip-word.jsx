@@ -1,6 +1,7 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import PropTypes from "prop-types";
 import { cn } from "../../lib/utils";
 
 export const FlipWords = ({
@@ -19,10 +20,9 @@ export const FlipWords = ({
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
-        startAnimation();
-      }, duration);
+    if (isAnimating) return;
+    const timer = setTimeout(startAnimation, duration);
+    return () => clearTimeout(timer);
   }, [isAnimating, duration, startAnimation]);
 
   return (
@@ -88,3 +88,5 @@ export const FlipWords = ({
     </AnimatePresence>)
   );
 };
+
+FlipWords.propTypes = { words: PropTypes.arrayOf(PropTypes.string).isRequired, duration: PropTypes.number, className: PropTypes.string };

@@ -1,36 +1,25 @@
-import { LuImport } from 'react-icons/lu'
-import sanjeev from '../assets/sanjeev.webp'
-import { FlipWords } from './ui/flip-word'
-import { motion } from 'framer-motion'
+import { FiArrowDown, FiArrowUpRight, FiDownload } from 'react-icons/fi';
+import sanjeev from '../assets/sanjeev.webp';
 
-const Hero = () => {
-  const words = ['A Web Developer', 'A FullStack Developer', 'A UI/UX Designer', 'A Creative Designer']
+export default function Hero() {
   return (
-    <section>
-      <div className="relative flex  flex-col items-center justify-center">
-        <h1 
-        className="mt-16 overflow-hidden text-[12vw] font-semibold uppercase leading-none text-center">
-          SANJEEV <br /> MAGAR
-        </h1>
-
-          <h2 className="pt-4 lg:text-4xl text-2xl text-left font-medium">
-            <FlipWords words={words} />
-          </h2>
-
-        <div className="mt-8 mb-8">
-          <a href="/Cv - Sanjeev.pdf" target="_blank" rel="noopener noreferrer" download className="flex items-center rounded-xl bg-lime-300 p-2 px-3 font-sans font-medium text-black hover:bg-lime-400">
-            <span className=''>Resume.pdf</span>
-            <LuImport className='ml-2' />
-          </a>
+    <section id="home" className="hero section-shell">
+      <div className="hero-copy">
+        <p className="eyebrow"><span className="accent-dot" /> Developer & designer</p>
+        <h1>Sanjeev<br /><span>Magar.</span></h1>
+        <p className="hero-intro">Thoughtful design.<br />Purposeful development.</p>
+        <p className="body-copy">I build responsive web experiences that bring great ideas to life — from the first sketch to the final line of code.</p>
+        <div className="hero-actions">
+          <a className="button button-primary" href="#projects">Explore my work <FiArrowUpRight aria-hidden="true" /></a>
+          <a className="button button-outline" href="/Cv%20-%20Sanjeev.pdf" download>Download CV <FiDownload aria-hidden="true" /></a>
         </div>
       </div>
-      <motion.div initial={{opacity:0}} 
-        animate={{opacity:1}} 
-        transition={{ease:[0.5, 1, 0.89, 1], duration:2}}  className='w-full'>
-        <img src={sanjeev} alt='Sanjeev Magar' className='h-96 w-full object-cover' />
-      </motion.div>
+      <div className="portrait-wrap">
+        <span className="portrait-label">Design meets development</span>
+        <img src={sanjeev} alt="Sanjeev Magar" className="portrait" fetchPriority="high" />
+        <div className="portrait-caption"><span>SANJEEV MAGAR</span><span>Full stack developer <FiArrowUpRight aria-hidden="true" /></span></div>
+      </div>
+      <a className="scroll-cue" href="#projects">Scroll to explore <FiArrowDown aria-hidden="true" /></a>
     </section>
-  )
+  );
 }
-
-export default Hero

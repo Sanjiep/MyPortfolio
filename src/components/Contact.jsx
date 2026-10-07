@@ -1,37 +1,10 @@
-import { CONTACT, SOCIAL_MEDIA_LINKS } from "../constants"
-
-const Contact = () => {
-
+import { CONTACT, SOCIAL_MEDIA_LINKS } from '../constants';
+import { FiArrowUpRight } from 'react-icons/fi';
+export default function Contact() {
   return (
-    <section id="contact">
-        <div className="mx-auto max-w-6xl">
-            <p className="py-5 text-center text-3xl lg:text-8xl">
-            Lets Connect.
-            </p>
-            <p className="p-4 text-xl">
-                {CONTACT.text}
-            </p>
-            <div className="flex flex-col items-center">
-            <a href="mailto:whoissanjiep@gmail.com" rel="noopener noreferrer" className="my-4 text-center text-2xl font-medium text-lime-300 lg:pt-6 lg:text-5xl">
-                {CONTACT.email}
-            </a>
-            <a href="tel:+358-415776010" rel="noopener noreferrer" className="my-4 text-center text-2xl font-medium text-lime-300 lg:pb-6 lg:text-5xl">
-                {CONTACT.phone}
-            </a>
-            </div>
-        </div>
-        <div className="mt-20 flex item-center justify-center gap-8">
-            {SOCIAL_MEDIA_LINKS.map((link, index) => (
-                <a key={index} target="_blank" href={link.href} rel="noopener noreferrer" className="transition delay-100 ease-in-out hover:text-lime-300">
-                    {link.icon}
-                </a>
-            ))}
-        </div>
-        <p className="my-8 text-center text-gray-400">
-            &copy; Sanjeev. All rights reserved.
-        </p>
-    </section>
-  )
+    <footer id="contact" className="section-shell contact-section">
+      <div className="contact-top"><div><p className="eyebrow">03 / Get in touch</p><h2>Say hello<span className="accent">.</span></h2><p>For collaborations, questions, or a good conversation.</p></div><div className="contact-links"><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}<FiArrowUpRight aria-hidden="true" /></a><a href={`tel:${CONTACT.phone.replace(/[^+\d]/g, '')}`}>{CONTACT.phone}</a></div></div>
+      <div className="footer-bottom"><p>© {new Date().getFullYear()} Sanjeev Magar</p><div className="social-links">{SOCIAL_MEDIA_LINKS.map((link) => <a key={link.href} target="_blank" href={link.href} rel="noopener noreferrer" aria-label={`${link.name} (opens in a new tab)`}>{link.icon}</a>)}</div><a href="#home">Back to top ↑</a></div>
+    </footer>
+  );
 }
-
-export default Contact
